@@ -1,0 +1,76 @@
+<!-- Qno.5 Create the below given layout using the flexbox in css, which should adapt itself on mobile screen as per given below output. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+        }
+        .header, .footer{
+            background-color: black;
+            color: white;
+            width: 5vw;
+        }
+        .sidebar{
+            background-color: rgb(63, 148, 63);
+            width: 90vw;
+            height: 50vh;
+        }
+        .content{
+            background-color: orange;
+            width: 90vw;
+            height: 50vh;
+        }
+        @media screen and (max-width: 768px) {
+            .container{
+                flex-direction: column;
+                position: relative;
+                
+            }
+            .header, .footer{
+             width: 100vw;
+             height: 60px;
+            
+            }
+            .footer{
+                position: absolute;
+                bottom: 0;
+            }
+            .content{
+                width: 100vw;
+             height: 60px;
+            }
+            .sidebar{
+                width: 100vw;
+               height: 60px;
+            }
+            .box{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+ </head>
+ <body>
+    <div class="container">
+        <div class="header box">Box1</div>
+        <div class="main">
+            <div class="sidebar box">Box2</div>
+            <div class="content box">Box3</div>
+        </div>
+        <div class="footer box">Box4</div>
+    </div>
+ </body>
+ </html>

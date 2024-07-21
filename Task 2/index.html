@@ -1,0 +1,43 @@
+<!-- Qno.2 Create an image gallery with three images in a row. Use media queries to adjust the layout to two images in a row for screens smaller than 800px and one image in a row for screens smaller than 500px -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+     div{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+     }
+     img{
+        width: calc(33.333% - 20px); 
+     }
+    @media screen and (max-width: 800px) {
+        img{
+            width: calc(50% - 20px);
+          
+        }
+    }
+    @media screen and (max-width: 500px) {
+        img{
+           width: 100%;
+        }
+    }
+    </style>
+ </head>
+ <body>
+    <div>
+        <img src="https://fastly.picsum.photos/id/868/200/300.jpg?hmac=UbXGSABDJTIs8VH95oRuEIVyJquMN8rcqqC9NrTFuAU" alt="">
+        <img src="https://fastly.picsum.photos/id/868/200/300.jpg?hmac=UbXGSABDJTIs8VH95oRuEIVyJquMN8rcqqC9NrTFuAU" alt="">
+        <img src="https://fastly.picsum.photos/id/868/200/300.jpg?hmac=UbXGSABDJTIs8VH95oRuEIVyJquMN8rcqqC9NrTFuAU" alt="">
+    </div>
+ </body>
+ </html>
